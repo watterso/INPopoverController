@@ -120,7 +120,7 @@
 {
 	if (![_popoverWindow isVisible]) {return;}
 	[self _callDelegateMethod:@selector(popoverWillClose:)]; // Call delegate
-	if (self.animates && self.animationType != INPopoverAnimationTypeFadeIn) {
+	if (self.animates && self.animationType != INPopoverAnimationTypeFadeIn && self.animationType != INPopoverAnimationTypePop) {
 		[_popoverWindow dismissAnimated];
 	} else {
 		[self _closePopoverAndResetVariables];
